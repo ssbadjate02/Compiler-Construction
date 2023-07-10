@@ -1,0 +1,138 @@
+Undeclared variable : xUndeclared variable : xUndeclared variable : xUndeclared variable : xUndeclared variable : xUndeclared variable : xInserted Function fun of type int at Position 581 
+Inserted Variable x of type int at Position 478 
+
+
+Graph 0:
+
+                            function
+                                |
+               |-------------------------------|
+               |                               |
+        function - args                    [newline]
+               |                               |
+    |--------------|                  |----------------|
+    |              |                  |                |
+ id(fun) function - args names       [=]              ???
+                   |                  |                |
+            |------|             |-------|          |--------|
+            |      |             |       |          |        |
+         id(int) id(x)         id(x)    [+]     id(return) id(x)
+                                         |
+                                       |----|
+                                       |    |
+                                     id(x) c(1)
+Inserted Variable a of type int at Position 515 
+Inserted Variable b of type float at Position 411 
+Inserted Variable a of type int at Position 810 
+Inserted Variable b of type int at Position 1001 
+Undeclared variable : fun
+
+Graph 1:
+
+                                                                                                             [newline]
+                                                                                                                 |
+         |----------------------------------------------------------------------------------------------------------------|
+         |                                                                                                                |
+     [newline]                                                                                                        [newline]
+         |                                                                                                                |
+   |--------|                                                                                                         |------------------------------------------------------------------------------------------------------|
+   |        |                                                                                                         |                                                                                                      |
+ m[;]      [;]                                                                                                    [newline]                                                                                               id("%d")
+   |        |                                                                                                         |
+   |        |                                                                                              |--------------------------------------------------------------------------------------------------|
+   |        |                                                                                              |                                                                                                  |
+ id(a)     [=]                                                                                         [newline]                                                                                             [=]
+            |                                                                                              |                                                                                                  |
+         |-----|                                                        |---------------------------------------------------------------------------------------|                                     |----------|
+         |     |                                                        |                                                                                       |                                     |          |
+       id(b) c(6.5)                                                    for                                                                                     ???                                  id(a) function - args
+                                                                        |                                                                                       |                                                |
+                        |-----------|-------------|-----------------------------------------|                                      |-----------|----------------------------|                                |------|
+                        |           |             |                                         |                                      |           |                            |                                |      |
+                       [;]         [<]           [=]                                    [newline]                                 [>]     id("%d %f")                   [newline]                         id(fun) c(10)
+                        |           |             |                                         |                                      |                                        |
+                        |        |-----|     |-------|                                 |--------------------------------|       |-----|                               |----------------------|
+                        |        |     |     |       |                                 |                                |       |     |                               |                      |
+                       [=]     id(a) c(10) id(a)    [+]                               for                            id("%d") id(a) c(10)                         [newline]             id("%d %f")
+                        |                            |                                 |                                                                              |
+                      |----|                       |----|        |----------|------------------------------|                                                 |----------------|
+                      |    |                       |    |        |          |             |                |                                                 |                |
+                    id(a) c(1)                   id(a) c(1)     [;]        [>]           [=]              [=]                                               [=]              [=]
+                                                                 |          |             |                |                                                 |                |
+                                                                 |        |----|     |-------|        |-------|                                         |-------|        |-------|
+                                                                 |        |    |     |       |        |       |                                         |       |        |       |
+                                                                [=]     id(b) c(0) id(b)    [-]     id(a)    [+]                                      id(a)    [-]     id(b)    [+]
+                                                                 |                           |                |                                                 |                |
+                                                              |-----|                      |----|           |----|                                            |----|           |----|
+                                                              |     |                      |    |           |    |                                            |    |           |    |
+                                                            id(b) c(10)                  id(b) c(1)       id(a) c(1)                                        id(a) c(1)       id(b) c(1)
+0 : b = 6.5
+1 : if a  b goto 4
+2 : t0 = 0
+3 : goto 5
+4 : t0 = 1
+5 : a = 1
+6 : if a < 10 goto 9
+7 : t1 = 0
+8 : goto 10
+9 : t1 = 1
+10 : if t1 != 1 goto 29
+11 : b = 10
+12 : if b > 0 goto 15
+13 : t2 = 0
+14 : goto 16
+15 : t2 = 1
+16 : if t2 != 1 goto 22
+17 : t3 = a + 1
+18 : a = t3
+19 : t4 = b - 1
+20 : b = t4
+21 : goto 12
+22 : if t2  "%d" goto 25
+23 : t5 = 0
+24 : goto 26
+25 : t5 = 1
+26 : t6 = a + 1
+27 : a = t6
+28 : goto 6
+29 : if a > 10 goto 32
+30 : t7 = 0
+31 : goto 33
+32 : t7 = 1
+33 : if t7 != 1 goto 35
+34 : goto 47
+35 : t8 = a - 1
+36 : a = t8
+37 : t9 = b + 1
+38 : b = t9
+39 : if a  b goto 42
+40 : t: = 0
+41 : goto 43
+42 : t: = 1
+43 : if t:  "%d %f" goto 46
+44 : t; = 0
+45 : goto 47
+46 : t; = 1
+47 : if t1  t7 goto 50
+48 : t< = 0
+49 : goto 51
+50 : t< = 1
+51 : a = fun
+52 : if t<  a goto 55
+53 : t= = 0
+54 : goto 56
+55 : t= = 1
+56 : if t=  "%d" goto 59
+57 : t> = 0
+58 : goto 60
+59 : t> = 1
+60 : if t0  t> goto 63
+61 : t? = 0
+62 : goto 64
+63 : t? = 1
+---------SYMBOL TABLE---------
+name = b  type = float scope = 1 isarray = 0 functionname=MAIN
+ name = x  type = int scope = 1 isarray = 0 functionname=fun
+ name = a  type = int scope = 1 isarray = 0 functionname=MAIN
+ name = a  type = int scope = 2 isarray = 0 functionname=MAIN
+ 

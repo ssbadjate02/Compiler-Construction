@@ -1,0 +1,232 @@
+Undeclared variable : xUndeclared variable : xUndeclared variable : xUndeclared variable : xUndeclared variable : xUndeclared variable : xInserted Function fun of type int at Position 581 
+Inserted Variable x of type int at Position 478 
+
+
+Graph 0:
+
+                            function
+                                |
+               |-------------------------------|
+               |                               |
+        function - args                    [newline]
+               |                               |
+    |--------------|                  |----------------|
+    |              |                  |                |
+ id(fun) function - args names       [=]          end_function
+                   |                  |                |
+            |------|             |-------|          |--------|
+            |      |             |       |          |        |
+         id(int) id(x)         id(x)    [+]     id(return) id(x)
+                                         |
+                                       |----|
+                                       |    |
+                                     id(x) c(1)
+Inserted Variable a of type int at Position 515 
+Inserted Variable b of type float at Position 411 
+y = -2Value of Variable b is 334782720
+Inserted Variable a of type int at Position 810 
+49y = 1Value of Variable a is 1
+Inserted Variable b of type int at Position 1001 
+12337y = 10Value of Variable b is 10
+int
+
+
+
+Error: Number of arguments do not match in printf
+Invalid Syntax
+Error: Type of arguments do not match in printf
+Invalid Syntaxint
+float
+
+
+
+Error: Type of arguments do not match in printf
+Invalid Syntax
+Error: Type of arguments do not match in printf
+Invalid Syntaxint
+float
+
+
+
+
+Error: Number of arguments do not match in printf
+Invalid Syntax
+Error: Type of arguments do not match in printf
+Invalid Syntax
+Error: Type of arguments do not match in printf
+Invalid SyntaxUndeclared variable : funint
+
+
+Error: Type of arguments do not match in printf
+Invalid Syntax
+
+Graph 1:
+
+                                                                                                             [newline]
+                                                                                                                 |
+         |----------------------------------------------------------------------------------------------------------------|
+         |                                                                                                                |
+     [newline]                                                                                                        [newline]
+         |                                                                                                                |
+   |--------|                                                                                                         |------------------------------------------------------------------------------------------------------|
+   |        |                                                                                                         |                                                                                                      |
+ m[;]      [;]                                                                                                    [newline]                                                                                               id("%d")
+   |        |                                                                                                         |
+   |        |                                                                                              |--------------------------------------------------------------------------------------------------|
+   |        |                                                                                              |                                                                                                  |
+ id(a)     [=]                                                                                         [newline]                                                                                             [=]
+            |                                                                                              |                                                                                                  |
+         |-----|                                                        |---------------------------------------------------------------------------------------|                                     |----------|
+         |     |                                                        |                                                                                       |                                     |          |
+       id(b) c(6.5)                                                    for                                                                                     ???                                  id(a) function - args
+                                                                        |                                                                                       |                                                |
+                        |-----------|-------------|-----------------------------------------|                                      |-----------|----------------------------|                                |------|
+                        |           |             |                                         |                                      |           |                            |                                |      |
+                       [;]         [<]           [=]                                    [newline]                                 [>]     id("%d %f")                   [newline]                         id(fun) c(10)
+                        |           |             |                                         |                                      |                                        |
+                        |        |-----|     |-------|                                 |--------------------------------|       |-----|                               |----------------------|
+                        |        |     |     |       |                                 |                                |       |     |                               |                      |
+                       [=]     id(a) c(10) id(a)    [+]                               for                            id("%d") id(a) c(10)                         [newline]             id("%d %f")
+                        |                            |                                 |                                                                              |
+                      |----|                       |----|        |----------|------------------------------|                                                 |----------------|
+                      |    |                       |    |        |          |             |                |                                                 |                |
+                    id(a) c(1)                   id(a) c(1)     [;]        [>]           [=]              [=]                                               [=]              [=]
+                                                                 |          |             |                |                                                 |                |
+                                                                 |        |----|     |-------|        |-------|                                         |-------|        |-------|
+                                                                 |        |    |     |       |        |       |                                         |       |        |       |
+                                                                [=]     id(b) c(0) id(b)    [-]     id(a)    [+]                                      id(a)    [-]     id(b)    [+]
+                                                                 |                           |                |                                                 |                |
+                                                              |-----|                      |----|           |----|                                            |----|           |----|
+                                                              |     |                      |    |           |    |                                            |    |           |    |
+                                                            id(b) c(10)                  id(b) c(1)       id(a) c(1)                                        id(a) c(1)       id(b) c(1)
+0 : if -1  -1 goto 3
+1 : t0 = 0
+2 : goto 4
+3 : t0 = 1
+4 : if a < 10 goto 7
+5 : t1 = 0
+6 : goto 8
+7 : t1 = 1
+8 : if t1 != 1 goto 26
+9 : if b > 0 goto 12
+10 : t2 = 0
+11 : goto 13
+12 : t2 = 1
+13 : if t2 != 1 goto 19
+14 : t3 = a + 1
+15 : a = t3
+16 : t4 = b - 1
+17 : b = t4
+18 : goto 9
+19 : if t2  "%d" goto 22
+20 : t5 = 0
+21 : goto 23
+22 : t5 = 1
+23 : t6 = a + 1
+24 : a = t6
+25 : goto 4
+26 : if a > 10 goto 29
+27 : t7 = 0
+28 : goto 30
+29 : t7 = 1
+30 : if t7 != 1 goto 32
+31 : goto 44
+32 : t8 = a - 1
+33 : a = t8
+34 : t9 = b + 1
+35 : b = t9
+36 : if a  b goto 39
+37 : t: = 0
+38 : goto 40
+39 : t: = 1
+40 : if t:  "%d %f" goto 43
+41 : t; = 0
+42 : goto 44
+43 : t; = 1
+44 : if t1  t7 goto 47
+45 : t< = 0
+46 : goto 48
+47 : t< = 1
+48 : a = fun
+49 : if t<  a goto 52
+50 : t= = 0
+51 : goto 53
+52 : t= = 1
+53 : if t=  "%d" goto 56
+54 : t> = 0
+55 : goto 57
+56 : t> = 1
+57 : if t0  t> goto 60
+58 : t? = 0
+59 : goto 61
+60 : t? = 1
+---------SYMBOL TABLE---------
+name = b  type = float scope = 1
+name = x  type = int scope = 1
+name = a  type = int scope = 1
+name = a  type = int scope = 2
+
+
+-------ICG-----table
+
+op = goto   arg1 = if -1  -1   arg2 =   result = 3
+op = =   arg1 = 0   arg2 =   result = t0
+op = goto   arg1 = 1   arg2 =   result = 4
+op = =   arg1 = 1   arg2 =   result = t0
+op = goto   arg1 = if t1 != 1   arg2 =   result = 26
+op = =   arg1 = 0   arg2 =   result = t1
+op = goto   arg1 = 1   arg2 =   result = 8
+op = =   arg1 = 1   arg2 =   result = t1
+op =    arg1 =    arg2 =   result = 
+op = goto   arg1 = if t2 != 1   arg2 =   result = 19
+op = =   arg1 = 0   arg2 =   result = t2
+op = goto   arg1 = 1   arg2 =   result = 13
+op = =   arg1 = 1   arg2 =   result = t2
+op =    arg1 =    arg2 =   result = 
+op = +   arg1 = a   arg2 = 1  result = t3
+op = =   arg1 = t3   arg2 =   result = a
+op = -   arg1 = b   arg2 = 1  result = t4
+op = =   arg1 = t4   arg2 =   result = b
+op = goto   arg1 =    arg2 =   result = 9
+op = goto   arg1 = if t2  "%d"   arg2 =   result = 22
+op = =   arg1 = 0   arg2 =   result = t5
+op = goto   arg1 = 1   arg2 =   result = 23
+op = =   arg1 = 1   arg2 =   result = t5
+op = +   arg1 = a   arg2 = 1  result = t6
+op = =   arg1 = t6   arg2 =   result = a
+op = goto   arg1 =    arg2 =   result = 4
+op = goto   arg1 = if a > 10   arg2 =   result = 29
+op = =   arg1 = 0   arg2 =   result = t7
+op = goto   arg1 = 1   arg2 =   result = 30
+op = =   arg1 = 1   arg2 =   result = t7
+op = goto   arg1 = 31   arg2 =   result = 
+op = goto   arg1 =    arg2 =   result = 
+op = -   arg1 = a   arg2 = 1  result = t8
+op = =   arg1 = t8   arg2 =   result = a
+op = +   arg1 = b   arg2 = 1  result = t9
+op = =   arg1 = t9   arg2 =   result = b
+op = goto   arg1 = if a  b   arg2 =   result = 39
+op = =   arg1 = 0   arg2 =   result = t:
+op = goto   arg1 = 1   arg2 =   result = 40
+op = =   arg1 = 1   arg2 =   result = t:
+op = goto   arg1 = if t:  "%d %f"   arg2 =   result = 43
+op = =   arg1 = 0   arg2 =   result = t;
+op = goto   arg1 = 1   arg2 =   result = 44
+op = =   arg1 = 1   arg2 =   result = t;
+op = goto   arg1 = if t1  t7   arg2 =   result = 47
+op = =   arg1 = 0   arg2 =   result = t<
+op = goto   arg1 = 1   arg2 =   result = 48
+op = =   arg1 = 1   arg2 =   result = t<
+op = =   arg1 = fun   arg2 =   result = a
+op = goto   arg1 = if t<  a   arg2 =   result = 52
+op = =   arg1 = 0   arg2 =   result = t=
+op = goto   arg1 = 1   arg2 =   result = 53
+op = =   arg1 = 1   arg2 =   result = t=
+op = goto   arg1 = if t=  "%d"   arg2 =   result = 56
+op = =   arg1 = 0   arg2 =   result = t>
+op = goto   arg1 = 1   arg2 =   result = 57
+op = =   arg1 = 1   arg2 =   result = t>
+op = goto   arg1 = if t0  t>   arg2 =   result = 60
+op = =   arg1 = 0   arg2 =   result = t?
+op = goto   arg1 = 1   arg2 =   result = 61
+op = =   arg1 = 1   arg2 =   result = t?
